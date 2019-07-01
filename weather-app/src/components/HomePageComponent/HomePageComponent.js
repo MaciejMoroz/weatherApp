@@ -1,10 +1,26 @@
 import React, { useEffect } from "react";
 // import store from "../../store/store";
-
-const HomePage = ({ location, getLocation }) => {
+let isFetched = false;
+const HomePage = ({
+  location,
+  getLocation,
+  weather,
+  isLoading,
+  isError,
+  getWeather,
+  fetchWeatherWithRedux
+}) => {
   useEffect(() => {
-    if (!location.longitude) {
+    if (location.latitude === 0 && location.longitude === 0) {
       getLocation();
+    }
+    if (
+      location.latitude !== 0 &&
+      location.longitude !== 0 &&
+      isFetched === false
+    ) {
+      isFetched = true;
+      fetchWeatherWithRedux(location.latitude, location.longitude);
     }
   });
 

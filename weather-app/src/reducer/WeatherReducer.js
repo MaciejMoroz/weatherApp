@@ -1,17 +1,17 @@
 import { ACTION_TYPES } from "../actions/weatherActions";
 
-// const initState = { weather: null, isLoading: true, isError: false };
+const initState = { weather: null, isLoading: true, isError: false };
 
-const weatherRedycer = (userGeoLocation = [], action) => {
+const weatherReducer = (state = initState, action) => {
   switch (action.type) {
-    case ACTION_TYPES.ADD_PRODUCT_TO_CART:
-      return [...userGeoLocation, action.geoLocation];
-
-    case ACTION_TYPES.REMOVE_PRODUCT_FROM_CART:
-      return userGeoLocation.filter(product => product.id !== action.productId);
+    case ACTION_TYPES.WEATHER_FETCH:
+      return { ...initState };
+    case ACTION_TYPES.WEATHER_FETCH_SUCCESS:
+      return { weather: action.weather, isLoading: false, isError: false };
+    case ACTION_TYPES.WEATHER_FETCH_ERROR:
+      return { weather: null, isLoading: false, isError: true };
     default:
-      return userGeoLocation;
+      return state;
   }
 };
-
-export default weatherRedycer;
+export default weatherReducer;

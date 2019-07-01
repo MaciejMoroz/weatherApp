@@ -25,16 +25,23 @@ export function fetchWeatherError() {
 }
 
 export const getWeather = (lat, lon) => {
-  const URL = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
+  console.log(lat, lon);
+
+  // const API_KEY = "65f29dd781b5d4d0381ad39044f1163e"; // gmail
+  const API_KEY = "4fce18647ab5195058667f77b7ba0f85"; // o2
+
+  // const URL = `http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=${API_KEY}`;
+  const URL = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+
   return fetch(URL, { method: "GET" }).then(response =>
     Promise.all([response, response.json()])
   );
 };
 
-export const fetchWeatherWithRedux = () => {
+export const fetchWeatherWithRedux = (lat, lon) => {
   return dispatch => {
     dispatch(fetchWeather());
-    return getWeather().then(([response, json]) => {
+    return getWeather(lat, lon).then(([response, json]) => {
       if (response.status === 200) {
         dispatch(fetchWeatherSuccess(json));
       } else {

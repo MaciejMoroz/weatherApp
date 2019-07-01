@@ -3,6 +3,6 @@ import weatherReducer from "./WeatherReducer";
 import geoLocationReducer from "./geoLocationReducer";
 
 export default combineReducers({
-  weatherReducer: weatherReducer,
+  weather: weatherReducer,
   geoLocation: geoLocationReducer
 });
