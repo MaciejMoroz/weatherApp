@@ -1,0 +1,45 @@
+@import "../../scss/variables.scss";
+
+.actuallWeather {
+  background-color: $color-3;
+  background-image: url("../../img/clouds.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  width: auto;
+  margin: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $color-3;
+    opacity: 0.7;
+  }
+}
+
+.cityName {
+  padding: $space;
+  text-align: center;
+}
+
+.actual-cont {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.left-coll {
+  position: relative;
+  width: 50%;
+  font-weight: $fw-bold;
+  text-align: center;
+}
+
+.right-coll {
+  padding-left: $base-unit;
+  text-align: center;
+  width: 50%;
+}

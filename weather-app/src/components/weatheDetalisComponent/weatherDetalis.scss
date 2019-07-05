@@ -1,0 +1,21 @@
+@import "../../scss/variables.scss";
+
+.weatherIcon,
+.windSpeed,
+.airPressure {
+  margin: $base-unit 0 $base-unit;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  img {
+    height: $space;
+    width: auto;
+  }
+  p {
+    margin: 0;
+    padding: 5px 10px;
+    white-space: nowrap;
+  }
+}

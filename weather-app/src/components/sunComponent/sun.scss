@@ -1,0 +1,19 @@
+@import "../../scss/variables.scss";
+
+.sunSet {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+}
+.sunIcon {
+  padding: 5px;
+  max-width: $space;
+  max-height: $space;
+}
+.arrow {
+  padding: 0 5px;
+}
+
+.sunTime {
+  margin: 7px 0;
+}

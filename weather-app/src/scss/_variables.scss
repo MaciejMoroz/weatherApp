@@ -1,0 +1,45 @@
+// COLORS
+$color-1: #fff;
+$color-2: #000;
+$color-3: #809ee7;
+
+//
+
+$white: #fff;
+$black: #000;
+$color-error: red;
+$color-ok: green;
+
+// FONTS
+$base-unit: 20px;
+
+$font-1: "Mada", sans-serif;
+$font-2: "Homenaje", sans-serif;
+
+$font-size-base: $base-unit; //20 px
+$fw-normal: 400;
+$fw-semi: 600;
+$fw-bold: 700;
+
+// FONT SIZE
+$font-size-body: $font-size-base; // 20
+$font-size-body2: $font-size-base * 0.75; // 15
+$font-size-h1: $font-size-base * 2.9; //58
+$font-size-h2: $font-size-base * 2.5; //50
+$font-size-h3: $font-size-base * 1.5; //30
+$font-size-h4: $font-size-base * 1.1; // 22
+$font-size-h5: $font-size-base * 0.7; // 14
+$font-size-h6: $font-size-base * 0.5; //10
+$fontsize-label: $font-size-base * 0.9; // 18
+
+// SPACE
+$space: 2 * $base-unit; // 40px
+
+// BREAK POINTS
+$bpoint-mob: 360px;
+$bpoint-tab: 768px;
+$bpoint-desk: 1024px;
+$bpoint-desklg: 1600px;
+
+$cont-max-width: $base-unit * 51.2; // 1024px
+$cont-min-width: $base-unit * 18; // 360px
