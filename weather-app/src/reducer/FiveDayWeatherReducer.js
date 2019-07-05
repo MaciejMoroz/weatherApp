@@ -1,6 +1,6 @@
-import { ACTION_TYPES } from "../actions/5dayWeatherActions";
+import { ACTION_TYPES } from "../actions/fiveDayWeatherActions";
 
-const initState = { d5_weather: null, isLoading: true, isError: false };
+const initState = { d5_weather: null, d5_isLoading: true, d5_isError: false };
 
 const Weather_5d_Reducer = (state = initState, action) => {
   switch (action.type) {
@@ -9,11 +9,11 @@ const Weather_5d_Reducer = (state = initState, action) => {
     case ACTION_TYPES.DAY_5_WEATHER_FETCH_SUCCESS:
       return {
         d5_weather: action.d5_weather,
-        isLoading: false,
-        isError: false
+        d5_isLoading: false,
+        d5_isError: false
       };
     case ACTION_TYPES.DAY_5_WEATHER_FETCH_ERROR:
-      return { d5_weather: null, isLoading: false, isError: true };
+      return { d5_weather: null, d5_isLoading: false, d5_isError: true };
     default:
       return state;
   }
