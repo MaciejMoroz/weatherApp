@@ -97,8 +97,8 @@ button {
 }
 
 .wrapper {
-  padding-left: $base-unit;
-  padding-right: $base-unit;
+  padding-left: 0;
+  padding-right: 0;
   position: relative;
 
   @media (min-width: $bpoint-tab) {

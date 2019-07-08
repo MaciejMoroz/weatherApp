@@ -1,0 +1,43 @@
+@import "../../scss/variables.scss";
+
+.forecastItem {
+  color: $color-2;
+  text-align: center;
+}
+
+.data {
+  font-weight: $fw-bold;
+
+  font-size: $font-size-h6;
+}
+
+.tempBox--forecast {
+  p {
+    font-weight: $fw-bold;
+    font-size: $font-size-h5;
+    margin-bottom: 0;
+  }
+}
+.minMaxTemp--forecast {
+  font-size: $font-size-h5;
+  img {
+    padding: 0 5px;
+  }
+}
+.weatherIcon--forecast,
+.windSpeed--forecast,
+.airPressure--forecast {
+  font-size: $font-size-h5;
+  display: inline-block;
+  img {
+    width: 20px;
+  }
+  span {
+    vertical-align: top;
+  }
+}
+.windSpeed--forecast {
+  span {
+    margin-left: $base-unit;
+  }
+}

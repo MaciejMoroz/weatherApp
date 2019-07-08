@@ -27,11 +27,11 @@ const ActuallWeather = ({
     }
   });
   if (isError) {
-    return <h2>Error while loading... :(</h2>;
+    return <h2 className="cos">Error while loading... :(</h2>;
   }
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return <h2 className="cos">Loading...</h2>;
   }
 
   return (

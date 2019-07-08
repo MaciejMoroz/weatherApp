@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import "./fiveDayWeather.scss";
+import ForecastList from "../ForecastListComponent/ForecastList";
 
 let isFetched = false;
 
 const ActuallWeather = ({
   location,
-  isLoadingD5,
-  isErrorD5,
-  d5Weather,
+  d5_isError,
+  d5_isLoading,
+  d5_weather,
   fetch_5day_WeatherWithRedux
 }) => {
   useEffect(() => {
@@ -22,18 +23,18 @@ const ActuallWeather = ({
       fetch_5day_WeatherWithRedux(location.latitude, location.longitude);
     }
   });
-  if (isErrorD5) {
-    return <h2>Error while loading... :(</h2>;
+  if (d5_isError) {
+    return <h2 className="cos">Error while loading... :(</h2>;
   }
 
-  if (isLoadingD5) {
-    return <h2>Loading...</h2>;
+  if (d5_isLoading) {
+    return <h2 className="cos">Loading...</h2>;
   }
 
   return (
-    <div className="component actuallWeather">
+    <div className="component fiveDay">
       <div className="wrapper">
-        <p className="cos">dziala</p>
+        <ForecastList forecasWweatherList={d5_weather.list} />
       </div>
     </div>
   );

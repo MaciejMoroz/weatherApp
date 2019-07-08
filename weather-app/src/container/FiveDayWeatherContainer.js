@@ -14,7 +14,9 @@ const mapDispatchToProps = {
 };
 
 const mapStateToProps = state => ({
-  d5_weather: state.d5_weather
+  d5_weather: state.d5_weather.d5_weather,
+  d5_isError: state.d5_weather.d5_isError,
+  d5_isLoading: state.d5_weather.d5_isLoading
 });
 
 const FiveDayWeatherContainer = connect(
