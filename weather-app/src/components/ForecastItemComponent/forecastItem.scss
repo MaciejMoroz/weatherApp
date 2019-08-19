@@ -37,7 +37,10 @@
   }
 }
 .windSpeed--forecast {
+  img {
+    width: 10px;
+  }
   span {
-    margin-left: $base-unit;
+    margin-left: $base-unit * 0.5;
   }
 }

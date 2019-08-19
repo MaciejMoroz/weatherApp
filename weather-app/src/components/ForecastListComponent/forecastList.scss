@@ -3,12 +3,17 @@
 .forcastList {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .forecastItem {
-  background-color: $color-4;
-  width: 150px;
-  padding: 10px;
-  margin: 2px;
-  border: 1px solid $color-3;
-  border-radius: 10px;
+  // background-color: $color-4;
+  width: 120px;
+  padding: 5px;
+  margin: 5px;
+  border-right: 1px solid $color-3;
+  border-bottom-right-radius: 5px;
+  &:hover {
+    box-shadow: 0 1px 3px $color-3;
+    transform: scale(1.05);
+  }
 }

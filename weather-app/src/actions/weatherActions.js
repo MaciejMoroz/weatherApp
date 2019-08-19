@@ -26,7 +26,7 @@ export function fetchWeatherError() {
 
 export const getWeather = (lat, lon) => {
   const API_KEY = "4fce18647ab5195058667f77b7ba0f85"; // o2
-  const URL = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+  const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
   return fetch(URL, { method: "GET" }).then(response =>
     Promise.all([response, response.json()])
