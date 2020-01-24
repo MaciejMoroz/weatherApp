@@ -1,0 +1,25 @@
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Homenaje|Mada:300&display=swap");
+
+// global
+@import "./reset";
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./global.scss";
+@import "./swiper";
+// addons
+
+// modules
+@import "../components/sunComponent/sun.scss";
+
+@import "../components/tempComponent/tempComponent.scss";
+
+@import "../components/actuallWeather/actuallWeather.scss";
+
+@import "../components/ForecastListComponent/forecastList.scss";
+
+@import "../components/ForecastListComponent/ForecastItemComponent/forecastItem.scss";
+
+@import "../components/weatheDetalisComponent/weatherDetalis.scss";
+
+@import "../components/twoDaysForecastComponent/twoDaysForecast.scss";

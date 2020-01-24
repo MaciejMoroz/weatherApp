@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import ActuallWeatherContainer from "../../container/actuallWeatherContainer";
-import FiveDayContainer from "../../container/FiveDayWeatherContainer";
+import TwoDayContainer from "../../container/twoDayForecastContainer";
 
 const HomePage = ({ location, getLocation }) => {
   useEffect(() => {
@@ -12,7 +12,7 @@ const HomePage = ({ location, getLocation }) => {
   return (
     <div>
       <ActuallWeatherContainer location={location} />
-      <FiveDayContainer location={location} />
+      <TwoDayContainer location={location} />
     </div>
   );
 };

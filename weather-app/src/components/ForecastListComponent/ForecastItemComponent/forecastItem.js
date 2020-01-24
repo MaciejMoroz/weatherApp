@@ -1,8 +1,8 @@
 import React from "react";
-import airPressure from "../../img/airPressure.png";
-import windArrow from "../../img/windArrow.png";
-import arrowUp from "../../img/arrow_up.png";
-import arrowDown from "../../img/arrow_down.png";
+import airPressure from "../../../img/airPressure.png";
+import windArrow from "../../../img/windArrow.png";
+import arrowUp from "../../../img/arrow_up.png";
+import arrowDown from "../../../img/arrow_down.png";
 import "./forecastItem.scss";
 
 const ForecastItem = ({ main, dt, weather, wind }) => {

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import "./fiveDayWeather.scss";
+import "./twoDaysForecast.scss";
 import ForecastList from "../ForecastListComponent/ForecastList";
+
 
 let isFetched = false;
 
@@ -17,7 +18,6 @@ const ActuallWeather = ({
       location.longitude !== 0 &&
       isFetched === false
     ) {
-      console.log(location.latitude);
 
       isFetched = true;
       fetch_5day_WeatherWithRedux(location.latitude, location.longitude);
@@ -32,9 +32,9 @@ const ActuallWeather = ({
   }
 
   return (
-    <div className="component fiveDay">
+    <div className="component twoDay">
       <div className="wrapper">
-        <ForecastList forecasWweatherList={d5_weather.list} />
+        <ForecastList forecasWweatherList={d5_weather.list} cityName={d5_weather.city.name} />
       </div>
     </div>
   );

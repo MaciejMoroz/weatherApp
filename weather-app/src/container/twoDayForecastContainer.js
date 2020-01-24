@@ -1,11 +1,9 @@
 import { connect } from "react-redux";
 
-import FiveDayWeatherComponent from "../components/FiveDayWeatherComponent/FiveDayWeatherComponent";
+import TwoDaysForecast from "../components/twoDaysForecastComponent/twoDaysForecastComponent";
 
 import { getLocation } from "../actions/geoLocationAction";
-import { fetch_5day_WeatherWithRedux } from "../actions/fiveDayWeatherActions";
-
-// const getUserWeather = state => state.weather;
+import { fetch_5day_WeatherWithRedux } from "../actions/twoDayForecastActions";
 
 const mapDispatchToProps = {
   getLocation,
@@ -19,9 +17,9 @@ const mapStateToProps = state => ({
   d5_isLoading: state.d5_weather.d5_isLoading
 });
 
-const FiveDayWeatherContainer = connect(
+const twoDayForecastContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(FiveDayWeatherComponent);
+)(TwoDaysForecast);
 
-export default FiveDayWeatherContainer;
+export default twoDayForecastContainer;

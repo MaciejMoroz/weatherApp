@@ -20,7 +20,6 @@ const ActuallWeather = ({
       location.longitude !== 0 &&
       isFetched === false
     ) {
-      console.log(location.latitude);
 
       isFetched = true;
       fetchWeatherWithRedux(location.latitude, location.longitude);
