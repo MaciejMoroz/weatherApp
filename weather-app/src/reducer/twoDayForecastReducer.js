@@ -1,4 +1,4 @@
-import { ACTION_TYPES } from "../actions/fiveDayWeatherActions";
+import { ACTION_TYPES } from "../actions/twoDayForecastActions";
 
 const initState = { d5_weather: null, d5_isLoading: true, d5_isError: false };
 

@@ -1,15 +1,59 @@
-import React from "react";
+import React from 'react';
+
 import "./forecastList.scss";
+import 'swiper/css/swiper.css';
 
-import ForecastItem from "../ForecastItemComponent/forecastItem";
 
-const ForecastList = ({ forecasWweatherList }) => {
+import Swiper from 'react-id-swiper';
+import ForecastItem from "./ForecastItemComponent/forecastItem";
+
+const ForecastList = ({ forecasWweatherList, cityName }) => {
+
+  let forecasWweather__next48h =
+    forecasWweatherList.filter(forecastItem =>
+      forecastItem.dt < ((forecasWweatherList[0].dt + 49 * 60 * 60))
+    );
+
+  const params = {
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: false,
+      clickable: true,
+    },
+    breakpoints: {
+      360: {
+        slidesPerView: 3,
+
+      },
+      500: {
+        slidesPerView: 4,
+
+      },
+      650: {
+        slidesPerView: 5,
+      },
+      786: {
+        slidesPerView: 6,
+      },
+      1024: {
+        slidesPerView: 8,
+      }
+    }
+  }
+
   return (
-    <div className="forcastList">
-      {forecasWweatherList.map((forecastItem, index) => (
-        <ForecastItem key={index} {...forecastItem} className="forecastItem" />
-      ))}
-    </div>
+    <>
+      <h4 className="bold">Next 48hrs in {cityName}</h4>
+      <div className="forcastList" >
+        <Swiper {...params} rebuildOnUpdate>
+          {forecasWweather__next48h.map((forecastItem, index) => (
+            <div key={index}>
+              <ForecastItem  {...forecastItem} />
+            </div>
+          ))}
+        </Swiper>
+      </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import { combineReducers } from "redux/es/redux";
 import WeatherReducer from "./WeatherReducer";
-import Weather_5d_Reducer from "./FiveDayWeatherReducer";
+import Weather_5d_Reducer from "./twoDayForecastReducer";
 import geoLocationReducer from "./geoLocationReducer";
 
 export default combineReducers({
