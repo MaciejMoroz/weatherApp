@@ -2,10 +2,11 @@ import { connect } from "react-redux";
 
 import HomePage from "../components/HomePageComponent/HomePageComponent";
 
-import { getLocation } from "../actions/geoLocationAction";
+import { getLocation, setLocation } from "../actions/geoLocationAction";
 
 const mapDispatchToProps = {
-  getLocation
+  getLocation,
+  setLocation
 };
 
 const mapStateToProps = state => ({

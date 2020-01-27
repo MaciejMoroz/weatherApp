@@ -98,8 +98,8 @@ button {
 
 .wrapper {
   // overflow: hidden;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   position: relative;
 
   @media (min-width: $bpoint-tab) {
@@ -131,4 +131,24 @@ button {
 
 .bold {
   font-weight: $fw-bold;
+}
+
+//arrows
+.up {
+  transform: rotate(180deg);
+}
+.down {
+  transform: rotate(0deg);
+}
+.left {
+  transform: rotate(90deg);
+}
+.right {
+  transform: rotate(-90deg);
+}
+
+.error {
+  color: red;
+  font-weight: $fw-bold;
+  text-align: center;
 }

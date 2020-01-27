@@ -2,13 +2,15 @@ import { ACTION_TYPES } from "../actions/geoLocationAction";
 
 const INIT_STATE = {
   coords: {
-    latitude: 0,
-    longitude: 0
+    latitude: 52.23547,
+    longitude: 21.04191
   }
 };
 
 const geoLocation = (state = INIT_STATE, action) => {
   switch (action.type) {
+    case ACTION_TYPES.SET_LOCATION:
+      return action.geoLocation;
     case ACTION_TYPES.GET_LOCATION:
       return action.payload;
     default:

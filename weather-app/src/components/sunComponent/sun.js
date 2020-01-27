@@ -1,24 +1,21 @@
 import React from "react";
-import "./sun.scss";
 
-import sunIcon from "../../img/sun.png";
-import arrowUp from "../../img/arrow_up.png";
-import arrowDown from "../../img/arrow_down.png";
+import sunSetIcon from "../../img/sunset-50.png"
+import sunRiseIcon from "../../img/sunrise-50.png"
 
 const Sun = ({ weather }) => {
   const sunset = new Date(weather.sys.sunset * 1000);
   const sunrise = new Date(weather.sys.sunrise * 1000);
   return (
     <div className="sunSet">
-      <img className="sunIcon" src={sunIcon} alt="sun icon" />
       <div className="sunTime">
-        <img className="arrow" src={arrowUp} alt="max temp icon" />
+        <img src={sunRiseIcon} alt="sunrise icon"></img>
         <span>{sunrise.toLocaleTimeString()}</span>
       </div>
 
       <div className="sunTime">
-        <img className="arrow" src={arrowDown} alt="max temp icon" />
-        <span> {sunset.toLocaleTimeString()}</span>
+        <img src={sunSetIcon} alt="sunset icon"></img>
+        <span>{sunset.toLocaleTimeString()} </span>
       </div>
     </div>
   );

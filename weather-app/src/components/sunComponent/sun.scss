@@ -5,15 +5,15 @@
   flex-wrap: nowrap;
   align-content: center;
 }
-.sunIcon {
-  padding: 5px;
-  max-width: $space;
-  max-height: $space;
-}
+
 .arrow {
   padding: 0 5px;
 }
 
 .sunTime {
   margin: 7px 0;
+  img {
+    height: 25px;
+    margin: 0 5px 0 15px;
+  }
 }

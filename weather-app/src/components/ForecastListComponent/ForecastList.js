@@ -1,8 +1,5 @@
 import React from 'react';
-
-import "./forecastList.scss";
 import 'swiper/css/swiper.css';
-
 
 import Swiper from 'react-id-swiper';
 import ForecastItem from "./ForecastItemComponent/forecastItem";
@@ -15,6 +12,7 @@ const ForecastList = ({ forecasWweatherList, cityName }) => {
     );
 
   const params = {
+    spaceBetween: 10,
     scrollbar: {
       el: '.swiper-scrollbar',
       hide: false,
@@ -36,7 +34,7 @@ const ForecastList = ({ forecasWweatherList, cityName }) => {
         slidesPerView: 6,
       },
       1024: {
-        slidesPerView: 8,
+        slidesPerView: 7,
       }
     }
   }

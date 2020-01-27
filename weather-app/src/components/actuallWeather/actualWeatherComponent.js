@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
-import "./actuallWeather.scss";
 
 import Sun from "../sunComponent/sun";
 import Temp from "../tempComponent/tempComponent";
 
 import WeatherDetalis from "../weatheDetalisComponent/weatherDetalis";
-let isFetched = false;
+
 
 const ActuallWeather = ({
   location,
@@ -15,16 +14,9 @@ const ActuallWeather = ({
   fetchWeatherWithRedux
 }) => {
   useEffect(() => {
-    if (
-      location.latitude !== 0 &&
-      location.longitude !== 0 &&
-      isFetched === false
-    ) {
-
-      isFetched = true;
-      fetchWeatherWithRedux(location.latitude, location.longitude);
-    }
-  });
+    fetchWeatherWithRedux(location.latitude, location.longitude);
+    // eslint-disable-next-line
+  }, [location]);
   if (isError) {
     return <h2 className="cos">Error while loading... :(</h2>;
   }

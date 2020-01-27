@@ -27,7 +27,7 @@ export function fetch_5day_WeatherError() {
 export const get5DayWeather = (lat, lon) => {
   const API_KEY = "4fce18647ab5195058667f77b7ba0f85"; // o2
 
-  const URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+  const URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&lang=en`;
 
   return fetch(URL, { method: "GET" }).then(response =>
     Promise.all([response, response.json()])

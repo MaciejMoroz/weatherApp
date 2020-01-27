@@ -4,6 +4,9 @@
   "homepage": "https://maciejmoroz.github.io/weatherApp/",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",

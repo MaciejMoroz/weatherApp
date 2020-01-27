@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
-import "./twoDaysForecast.scss";
+
 import ForecastList from "../ForecastListComponent/ForecastList";
-
-
-let isFetched = false;
 
 const ActuallWeather = ({
   location,
@@ -13,16 +10,9 @@ const ActuallWeather = ({
   fetch_5day_WeatherWithRedux
 }) => {
   useEffect(() => {
-    if (
-      location.latitude !== 0 &&
-      location.longitude !== 0 &&
-      isFetched === false
-    ) {
-
-      isFetched = true;
-      fetch_5day_WeatherWithRedux(location.latitude, location.longitude);
-    }
-  });
+    fetch_5day_WeatherWithRedux(location.latitude, location.longitude);
+    // eslint-disable-next-line
+  }, [location]);
   if (d5_isError) {
     return <h2 className="cos">Error while loading... :(</h2>;
   }
