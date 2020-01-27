@@ -38,6 +38,6 @@ export const getLocation = () => {
 
   return {
     type: ACTION_TYPES.GET_LOCATION,
-    payload: location
+    geoLocation: location
   };
 };

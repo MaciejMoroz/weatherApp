@@ -152,3 +152,12 @@ button {
   font-weight: $fw-bold;
   text-align: center;
 }
+
+//
+
+.scrollableDiv {
+  color: #000;
+  height: 20vh;
+  width: 30%;
+  overflow: auto;
+}

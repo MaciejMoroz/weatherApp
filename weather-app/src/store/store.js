@@ -12,11 +12,11 @@ function promiseMiddleware({ dispatch }) {
   }
 
   return next => action => {
-    return isPromise(action.payload)
-      ? action.payload.then(
-          result => dispatch({ ...action, payload: result }),
-          error => dispatch({ ...action, payload: error, error: true })
-        )
+    return isPromise(action.geoLocation)
+      ? action.geoLocation.then(
+        result => dispatch({ ...action, geoLocation: result }),
+        error => dispatch({ ...action, geoLocation: error, error: true })
+      )
       : next(action);
   };
 }

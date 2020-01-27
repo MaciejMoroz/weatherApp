@@ -12,7 +12,7 @@ const geoLocation = (state = INIT_STATE, action) => {
     case ACTION_TYPES.SET_LOCATION:
       return action.geoLocation;
     case ACTION_TYPES.GET_LOCATION:
-      return action.payload;
+      return action.geoLocation;
     default:
       return state;
   }
