@@ -153,11 +153,25 @@ button {
   text-align: center;
 }
 
-//
+//todo  - przeniesc style do odzielnego pliku
 
 .scrollableDiv {
   color: #000;
-  height: 20vh;
+  height: 80vh;
   width: 30%;
   overflow: auto;
+  position: absolute;
+  z-index: 10;
+  background-color: $color-1;
+  &:hover {
+    display: block;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }

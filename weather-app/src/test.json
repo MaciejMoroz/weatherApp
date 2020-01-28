@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 765914,
     "name": "Lubenia",
     "country": "PL",
@@ -7,7 +8,7 @@
       "lat": 49.930779
     }
   },
-{
+  {
     "id": 765957,
     "name": "Lososina Dolna",
     "country": "PL",
@@ -16,7 +17,7 @@
       "lat": 49.749771
     }
   },
-{
+  {
     "id": 765981,
     "name": "Lopuszno",
     "country": "PL",
@@ -25,7 +26,7 @@
       "lat": 50.948639
     }
   },
-{
+  {
     "id": 765983,
     "name": "Lopuszna",
     "country": "PL",
@@ -34,7 +35,7 @@
       "lat": 49.472809
     }
   },
-{
+  {
     "id": 765984,
     "name": "Lopuszka Wielka",
     "country": "PL",
@@ -43,7 +44,7 @@
       "lat": 49.93454
     }
   },
-{
+  {
     "id": 765995,
     "name": "Lopiennik Gorny",
     "country": "PL",
@@ -52,7 +53,7 @@
       "lat": 51.040798
     }
   },
-{
+  {
     "id": 766021,
     "name": "Loniow",
     "country": "PL",
@@ -61,7 +62,7 @@
       "lat": 50.56443
     }
   },
-{
+  {
     "id": 766044,
     "name": "Lomazy",
     "country": "PL",
@@ -70,7 +71,7 @@
       "lat": 51.90435
     }
   },
-{
+  {
     "id": 766073,
     "name": "Lochow",
     "country": "PL",
@@ -79,7 +80,7 @@
       "lat": 52.530762
     }
   },
-{
+  {
     "id": 766090,
     "name": "Liw",
     "country": "PL",
@@ -88,7 +89,7 @@
       "lat": 52.375149
     }
   },
-{
+  {
     "id": 766132,
     "name": "Lisia Gora",
     "country": "PL",
@@ -96,4 +97,194 @@
       "lon": 21.04397,
       "lat": 50.080391
     }
-  }]
+  },
+  {
+    "id": 3087705,
+    "name": "Pszczyna",
+    "country": "PL",
+    "coord": {
+      "lon": 18.953819,
+      "lat": 49.98037
+    }
+  },
+  {
+    "id": 7533553,
+    "name": "Gniew",
+    "country": "PL",
+    "coord": {
+      "lon": 18.811399,
+      "lat": 53.841
+    }
+  },
+  {
+    "id": 3099127,
+    "name": "Gniew",
+    "country": "PL",
+    "coord": {
+      "lon": 18.823099,
+      "lat": 53.836021
+    }
+  },
+  {
+    "id": 7533172,
+    "name": "Złoty Stok",
+    "country": "PL",
+    "coord": {
+      "lon": 16.871799,
+      "lat": 50.434399
+    }
+  },
+  {
+    "id": 3080061,
+    "name": "Zloty Stok",
+    "country": "PL",
+    "coord": {
+      "lon": 16.87586,
+      "lat": 50.444721
+    }
+  },
+  {
+    "id": 3089645,
+    "name": "Otmęt",
+    "country": "PL",
+    "coord": {
+      "lon": 17.975309,
+      "lat": 50.483639
+    }
+  },
+  {
+    "id": 7530872,
+    "name": "Powiat tomaszowski",
+    "country": "PL",
+    "coord": {
+      "lon": 23.52083,
+      "lat": 50.478249
+    }
+  },
+  {
+    "id": 7531659,
+    "name": "Tomaszów Lubelski",
+    "country": "PL",
+    "coord": {
+      "lon": 23.426399,
+      "lat": 50.4478
+    }
+  },
+  {
+    "id": 756868,
+    "name": "Tomaszow Lubelski",
+    "country": "PL",
+    "coord": {
+      "lon": 23.416161,
+      "lat": 50.44767
+    }
+  },
+  {
+    "id": 7531060,
+    "name": "Powiat białostocki",
+    "country": "PL",
+    "coord": {
+      "lon": 23.20767,
+      "lat": 53.11729
+    }
+  },
+  {
+    "id": 7533545,
+    "name": "Czarna Białostocka",
+    "country": "PL",
+    "coord": {
+      "lon": 23.267799,
+      "lat": 53.302299
+    }
+  },
+  {
+    "id": 773941,
+    "name": "Czarna Bialostocka",
+    "country": "PL",
+    "coord": {
+      "lon": 23.28146,
+      "lat": 53.305092
+    }
+  },
+  {
+    "id": 7533514,
+    "name": "Wyszogród",
+    "country": "PL",
+    "coord": {
+      "lon": 20.191099,
+      "lat": 52.391701
+    }
+  },
+  {
+    "id": 754451,
+    "name": "Wyszogrod",
+    "country": "PL",
+    "coord": {
+      "lon": 20.190809,
+      "lat": 52.389881
+    }
+  },
+  {
+    "id": 7530733,
+    "name": "Powiat namysłowski",
+    "country": "PL",
+    "coord": {
+      "lon": 17.763041,
+      "lat": 51.016281
+    }
+  },
+  {
+    "id": 7533527,
+    "name": "Namysłów",
+    "country": "PL",
+    "coord": {
+      "lon": 17.6954,
+      "lat": 51.076801
+    }
+  },
+  {
+    "id": 3091141,
+    "name": "Namyslow",
+    "country": "PL",
+    "coord": {
+      "lon": 17.722839,
+      "lat": 51.07592
+    }
+  },
+  {
+    "id": 7530900,
+    "name": "Powiat siemiatycki",
+    "country": "PL",
+    "coord": {
+      "lon": 22.886419,
+      "lat": 52.488419
+    }
+  },
+  {
+    "id": 7533298,
+    "name": "Drohiczyn",
+    "country": "PL",
+    "coord": {
+      "lon": 22.653999,
+      "lat": 52.406399
+    }
+  },
+  {
+    "id": 772959,
+    "name": "Drohiczyn",
+    "country": "PL",
+    "coord": {
+      "lon": 22.658529,
+      "lat": 52.400108
+    }
+  },
+  {
+    "id": 7530980,
+    "name": "Powiat słubicki",
+    "country": "PL",
+    "coord": {
+      "lon": 14.78921,
+      "lat": 52.32267
+    }
+  }
+]
