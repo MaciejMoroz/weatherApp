@@ -1,12 +1,12 @@
 @import "../../scss/variables.scss";
 
 .actuallWeather {
-  // background-color: $color-3;
+  padding-top: 73px;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
-  left: 0;
+  // left: 0;
   width: auto;
   margin: 0;
   &::before {
@@ -17,7 +17,6 @@
     left: 0;
     bottom: 0;
     background-color: $color-3;
-    opacity: 0.7;
   }
 }
 

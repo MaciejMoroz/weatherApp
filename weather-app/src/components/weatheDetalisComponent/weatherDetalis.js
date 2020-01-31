@@ -9,10 +9,11 @@ const weatherDetalis = ({ weather }) => {
       <div className="weatherIcon">
         <WeatherIcon iconType={weather.weather[0].icon} iconId={weather.weather[0].id}></WeatherIcon>
         <div>
-          <p>{weather.weather[0].description} </p>
+          <p>{weather.weather[0].description}</p>
           {weather.weather[0].main === "Rain" ? (
-            <p>{weather.rain["3h"]} mm</p>
-          ) : null}
+            typeof weather['rain'] !== undefined ? null : <p>{weather.rain["3h"]} mm</p>
+          ) : null
+          }
         </div>
       </div>
       <div className="windSpeed">

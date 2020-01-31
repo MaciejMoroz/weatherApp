@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import CitesListContainer from "../../container/citiesListContainer"
+import Button from "../common/button"
+
+import { faCrosshairs, faSearch } from '@fortawesome/free-solid-svg-icons'
+
 
 
 // import citesListData from "../../city.list.json"
-import citesListData from "../../test.json"
+// import citesListData from "../../test.json"
+import citesListData from "../../test copy.json"
+
 
 const TopBar = ({ getLocation, setLocation }) => {
+
     const [citySearch, setCitySearch] = useState("");
     const [inputValue, setInputValue] = useState("");
     const [citesList, setcitesList] = useState(citesListData);
-    const [msg, setMsg] = useState(null);
+    const [error, setError] = useState(null);
     const [isVisable, setVisibility] = useState("hidden");
 
     let filtrerCitesList = (event) => {
@@ -32,61 +39,86 @@ const TopBar = ({ getLocation, setLocation }) => {
 
         })
     }
-    let handleClick = () => {
-        if (citySearch.length === 0) {
-            return setMsg("couldn't find the city try by geo location")
 
+    const clearSearchInput = () => {
+        setInputValue("");
+        setError(null)
+    };
+
+    let handleSearchBtnClick = () => {
+
+        if (citySearch.length === 0) {
+
+            return setError("couldn't find the city try by geolocation")
         } else {
+
             setLocation(citySearch.coord.lat, citySearch.coord.lon);
 
         }
+        clearSearchInput()
     }
-    const clearInput = () => {
-        setInputValue("");
-    };
 
-    let add = (event) => {
+
+    let handleEnterKeyClick = (event) => {
         if (event.key === "Enter") {
             setLocation(citySearch.coord.lat, citySearch.coord.lon)
+            clearSearchInput()
         }
     }
 
+    let handleGeolocationBtnClick = () => {
+        getLocation();
+        clearSearchInput();
+    }
+
     return (
-        <>
-            {console.log(isVisable)
-            }
-            <button onClick={() => getLocation()}>by geo location</button>
-            <input
-                id="citySearch"
-                type="text"
-                placeholder="search..."
-                value={inputValue}
-                onChange={(e) => {
-                    filtrerCitesList(e.target.value)
-                    searchInput(e.target.value)
-                    setInputValue(e.target.value)
-                }}
-                onKeyDown={(event) => add(event)}
-                onFocus={() => setVisibility("show")}
-                onBlur={() => {
-                    setVisibility("hidden")
-                    clearInput()
-                }}
-            >
-            </input>
-            {msg != null ? <p className="error">{msg}</p> : null}
+        <div className={'citySearch'}>
+            <form className={"citySearch__form"}>
 
+                <input
+                    id="citySearch"
+                    type="text"
+                    placeholder="search..."
+                    value={inputValue}
+                    className={[error === null ? null : 'citySearch__form__input--error', 'citySearch__form__input'].join(' ')}
+                    onChange={(e) => {
+                        filtrerCitesList(e.target.value)
+                        searchInput(e.target.value)
+                        setInputValue(e.target.value)
+                    }}
+                    onKeyDown={(event) => handleEnterKeyClick(event)}
+                    onFocus={() => setVisibility("show")}
+                    onBlur={() => {
+                        setVisibility("hidden")
+                        clearSearchInput()
+                    }}
+                >
+                </input>
 
-            <button onClick={() => {
-                handleClick()
-                clearInput()
-            }
-            }>
-                serch
-                    </button>
-            <CitesListContainer isVisable={isVisable} cities={citesList}></CitesListContainer>
+                <Button
+                    classProps={'btn citySearch__form__btnSearch'}
+                    icon={faSearch}
+                    iconColor={"#809ee7"}
+                    handleClick={handleSearchBtnClick}
+                    isError={error}
+                >
+                </Button>
 
-        </>
+                <Button
+                    classProps={'btn citySearch__form__btnGeo'}
+                    icon={faCrosshairs}
+                    iconColor={"#809ee7"}
+                    handleClick={handleGeolocationBtnClick}
+                    onClick={() => clearSearchInput()}
+                >
+
+                </Button>
+
+                <CitesListContainer isVisable={isVisable} setVisibility={setVisibility} cities={citesList}></CitesListContainer>
+            </form>
+            <span className={["form-error-msg", "error", error !== null ? 'showError' : "hideError"].join(" ")}>{error}</span>
+        </div>
+
     );
 }
 

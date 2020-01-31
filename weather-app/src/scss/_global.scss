@@ -65,6 +65,7 @@ p {
   font-size: $font-size-body;
   margin: 0.5 * $space 0;
 }
+
 input {
   font-family: $font-1;
   &::placeholder {
@@ -72,16 +73,18 @@ input {
   }
   border: none;
   background: none;
-  padding: 0;
+  padding: 10px;
   &:focus {
-    box-shadow: 0 3px 5px $color-1;
+    border: solid 2px $color-1;
+    border-radius: 5px 0 0 5px;
   }
-  .is-submitted &:invalid {
-    box-shadow: 0 3px 5px $color-error;
-    + .form-error-msg {
-      visibility: visible;
-    }
-  }
+}
+
+.showError {
+  display: unset;
+}
+.hideError {
+  display: none;
 }
 
 button {
@@ -91,13 +94,14 @@ button {
 }
 
 .btn {
-  &:focus {
-    outline: none;
-  }
+  background-color: $color-1;
+  padding: 2px;
+  border: 2px solid $color-3;
+  margin: 5px;
 }
 
 .wrapper {
-  // overflow: hidden;
+  overflow: hidden;
   padding-left: 10px;
   padding-right: 10px;
   position: relative;
@@ -148,24 +152,7 @@ button {
 }
 
 .error {
-  color: red;
-  font-weight: $fw-bold;
-  text-align: center;
-}
-
-//todo  - przeniesc style do odzielnego pliku
-
-.scrollableDiv {
-  color: #000;
-  height: 80vh;
-  width: 30%;
-  overflow: auto;
-  position: absolute;
-  z-index: 10;
-  background-color: $color-1;
-  &:hover {
-    display: block;
-  }
+  color: $color-error;
 }
 
 .show {

@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+let render = 0
+const CitesList = ({ cities, setLocation, isVisable, setVisibility }) => {
+    useEffect(() => {
 
-const CitesList = ({ cities, setLocation, isVisable }) => {
-
+        console.log(render);
+        render++
+    }, [setVisibility, isVisable])
     if (cities.length > 0) {
         return (
-            <ul className={[isVisable, "scrollableDiv"].join(' ')}>
-                {cities.map(city =>
-                    <li onClick={() => setLocation(city.coord.lat, city.coord.lon)} key={city.id}>{city.name}</li>
-                )}
+            <>
+                {console.log(render)}
+                < ul className={[isVisable, "scrollableDiv"].join(' ')}
 
-            </ul>)
+                >
+                    {
+                        cities.map(city =>
+                            <li onClick={() => {
+                                setLocation(city.coord.lat, city.coord.lon)
+                            }
+                            } key={city.id}>{city.name} </li>
+                        )
+                    }
+
+                </ul >
+            </>
+        )
 
     } else {
         return (
