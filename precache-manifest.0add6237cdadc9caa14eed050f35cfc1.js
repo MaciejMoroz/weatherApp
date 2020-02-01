@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2c22029bc9ba8813609498bc3da2b310",
+    "revision": "0499387e7312a9024b94f1189737b366",
     "url": "/weatherApp/index.html"
   },
   {
-    "revision": "51ca99359601ac053c47",
+    "revision": "605b09f41d6c7e56f8c5",
     "url": "/weatherApp/static/css/2.1cad6180.chunk.css"
   },
   {
-    "revision": "41c99199a0c2a9bc51d7",
-    "url": "/weatherApp/static/css/main.5db87641.chunk.css"
+    "revision": "8646c5143b7f53203a29",
+    "url": "/weatherApp/static/css/main.9219c0f3.chunk.css"
   },
   {
-    "revision": "51ca99359601ac053c47",
-    "url": "/weatherApp/static/js/2.c3c6f60a.chunk.js"
+    "revision": "605b09f41d6c7e56f8c5",
+    "url": "/weatherApp/static/js/2.d51d8bf9.chunk.js"
   },
   {
-    "revision": "41c99199a0c2a9bc51d7",
-    "url": "/weatherApp/static/js/main.bb82ba38.chunk.js"
+    "revision": "8646c5143b7f53203a29",
+    "url": "/weatherApp/static/js/main.a7c5fff2.chunk.js"
   },
   {
     "revision": "b0ae699ea3cc63fef9c8",
@@ -438,5 +438,37 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4667cf520b59822a53b55230cfa663fa",
     "url": "/weatherApp/static/media/50n781.4667cf52.png"
+  },
+  {
+    "revision": "e0ba64afd0c9829e235a3671d9865574",
+    "url": "/weatherApp/static/media/Clear.e0ba64af.jpg"
+  },
+  {
+    "revision": "969057eb5d5435c7d126db2caa80dbbc",
+    "url": "/weatherApp/static/media/CloudsBrokenclouds.969057eb.jpg"
+  },
+  {
+    "revision": "94a95a0df5bf7da9ccc8fc49cc71f82f",
+    "url": "/weatherApp/static/media/CloudsFew.94a95a0d.jpg"
+  },
+  {
+    "revision": "a1f6a51df6ad46df08503ab559b9ba60",
+    "url": "/weatherApp/static/media/CloudsOvercast.a1f6a51d.jpg"
+  },
+  {
+    "revision": "1ea22d8ebba2b3d84c0ddad95dca5df9",
+    "url": "/weatherApp/static/media/CloudsScattered.1ea22d8e.jpg"
+  },
+  {
+    "revision": "a020a55c2182b6cfce6a5cab5400ff23",
+    "url": "/weatherApp/static/media/Rain.a020a55c.jpg"
+  },
+  {
+    "revision": "f0baf136943c74f6d6e31c97471ef86c",
+    "url": "/weatherApp/static/media/Snow.f0baf136.jpg"
+  },
+  {
+    "revision": "1943eac10c13b10c1d5e64671ca88e0e",
+    "url": "/weatherApp/static/media/Thunderstorm.1943eac1.jpg"
   }
 ]);
