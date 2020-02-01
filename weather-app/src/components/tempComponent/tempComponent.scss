@@ -8,12 +8,9 @@
   transform: translate(-50%, -50%);
 }
 .minMaxTemp {
-  position: absolute;
-
-  margin-top: -$space * 0.8;
-  margin-left: -$space * 1.5;
   font-size: $font-size-h5;
-  img {
-    padding: 0 5px;
-  }
+}
+.perceivedTemp {
+  font-size: $fontsize-label;
+  font-weight: $fw-normal;
 }

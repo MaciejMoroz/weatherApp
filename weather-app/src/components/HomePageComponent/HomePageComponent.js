@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 
 import ActuallWeatherContainer from "../../container/actuallWeatherContainer";
@@ -7,19 +7,29 @@ import TopBarContainer from "../../container/topBarContainer"
 
 
 const HomePage = ({ location, getLocation, setLocation }) => {
+  // const [coords, setCoords] = useState([]);
+  useEffect(() => {
+    if (location) {
+      let coords = {
+        coords: {
+          latitude: location.latitude,
+          longitude: location.longitude
+        }
+      }
+      localStorage.setItem('coords', JSON.stringify(coords));
+    }
+  }, [location]);
 
-  if (location.latitude === undefined && location.longitude === undefined) {
-    return <p>Please allow geolocation</p>
-  } else {
+  return (
+    <div>
 
-    return (
-      <div>
-        <TopBarContainer></TopBarContainer>
-        <ActuallWeatherContainer location={location} />
-        <TwoDayContainer location={location} />
-      </div>
-    );
-  }
+      <TopBarContainer></TopBarContainer>
+      <ActuallWeatherContainer location={location} />
+      <TwoDayContainer location={location} />
+
+    </div>
+  );
+  // }
 };
 
 export default HomePage;

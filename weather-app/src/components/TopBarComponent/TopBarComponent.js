@@ -15,7 +15,7 @@ const TopBar = ({ getLocation, setLocation }) => {
 
     const [citySearch, setCitySearch] = useState("");
     const [inputValue, setInputValue] = useState("");
-    const [citesList, setcitesList] = useState(citesListData);
+    const [citesList, setcitesList] = useState(citesListData.sort((a, b) => a.name.localeCompare(b.name)));
     const [error, setError] = useState(null);
     const [isVisable, setVisibility] = useState("hidden");
 
@@ -61,8 +61,7 @@ const TopBar = ({ getLocation, setLocation }) => {
 
     let handleEnterKeyClick = (event) => {
         if (event.key === "Enter") {
-            setLocation(citySearch.coord.lat, citySearch.coord.lon)
-            clearSearchInput()
+            handleSearchBtnClick()
         }
     }
 
@@ -73,6 +72,10 @@ const TopBar = ({ getLocation, setLocation }) => {
 
     return (
         <div className={'citySearch'}>
+            <div className={["formErrorMsg", "error", error !== null ? 'showError' : "hideError"].join(" ")}>
+                <p className="formErrorMsg__cont">{error}
+                </p>
+            </div>
             <form className={"citySearch__form"}>
 
                 <input
@@ -116,7 +119,7 @@ const TopBar = ({ getLocation, setLocation }) => {
 
                 <CitesListContainer isVisable={isVisable} setVisibility={setVisibility} cities={citesList}></CitesListContainer>
             </form>
-            <span className={["form-error-msg", "error", error !== null ? 'showError' : "hideError"].join(" ")}>{error}</span>
+
         </div>
 
     );

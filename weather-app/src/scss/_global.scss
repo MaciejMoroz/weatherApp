@@ -48,7 +48,7 @@ img {
 h1,
 .h1 {
   font-size: $font-size-h1;
-  margin-bottom: 0.5 * $space;
+  // margin-bottom: 0.5 * $space;
 }
 h2,
 .h2 {
@@ -63,7 +63,7 @@ h3,
 
 p {
   font-size: $font-size-body;
-  margin: 0.5 * $space 0;
+  // margin: 0.5 * $space 0;
 }
 
 input {
@@ -155,10 +155,40 @@ button {
   color: $color-error;
 }
 
-.show {
-  display: block;
+.showError {
+  // display: block;
+  transition: all 1s;
+  position: relative;
+  top: 0;
+  .citySearch {
+    top: 50px;
+  }
+}
+.hideError {
+  transition: all 1s;
+  position: absolute;
+  top: -50px;
+  .citySearch {
+    top: 0;
+  }
 }
 
 .hidden {
   display: none;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $color-2;
+  &_error {
+    color: $color-error;
+  }
+}
+
+.test {
+  border: 1px black solid;
+  color: red;
 }

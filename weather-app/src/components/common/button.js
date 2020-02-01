@@ -15,7 +15,6 @@ const Button = ({ value, icon, iconColor, handleClick, classProps, isError }) =>
             }}
             className={[isError === null ? classProps : `${classProps}--error`, classProps].join(' ')}
         >
-            {console.log(isError)}
             <FontAwesomeIcon icon={icon} color={iconColor} />
             {value}
         </button>

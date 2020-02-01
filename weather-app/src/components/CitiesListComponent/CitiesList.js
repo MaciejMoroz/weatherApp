@@ -1,17 +1,11 @@
 import React, { useEffect } from 'react';
-let render = 0
 const CitesList = ({ cities, setLocation, isVisable, setVisibility }) => {
     useEffect(() => {
-
-        console.log(render);
-        render++
     }, [setVisibility, isVisable])
     if (cities.length > 0) {
         return (
             <>
-                {console.log(render)}
                 < ul className={[isVisable, "scrollableDiv"].join(' ')}
-
                 >
                     {
                         cities.map(city =>
@@ -21,7 +15,6 @@ const CitesList = ({ cities, setLocation, isVisable, setVisibility }) => {
                             } key={city.id}>{city.name} </li>
                         )
                     }
-
                 </ul >
             </>
         )

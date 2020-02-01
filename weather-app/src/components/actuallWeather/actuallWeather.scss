@@ -4,9 +4,8 @@
   padding-top: 73px;
   background-repeat: no-repeat;
   background-size: cover;
-  // overflow: hidden;
+  background-position: center center;
   position: relative;
-  // left: 0;
   width: auto;
   margin: 0;
   &::before {
@@ -17,6 +16,7 @@
     left: 0;
     bottom: 0;
     background-color: $color-3;
+    opacity: 0.4;
   }
 }
 
